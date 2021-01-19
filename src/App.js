@@ -3,10 +3,18 @@ import './App.css';
 import React, { Component } from 'react'
 
 export class App extends Component {
+
+  state={
+    nombre:1
+  }
+
   render() {
+    console.log(this.state.nombre);
     return (
       <div>
-        <h1>Exercice 8</h1>
+        <h1 onMouseOver={(e)=>{
+          console.log(e.target.innerHTML)
+        }}>Exercice 8</h1>
 
         <button onClick={()=> {
           console.log('Bonjour')
@@ -23,9 +31,6 @@ export class App extends Component {
         <button onDoubleClick={()=> {
           console.log('Bonjour')
         }}>Button Double Click</button>
-        
-        
-        
       </div>
     )
   }
